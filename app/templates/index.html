@@ -1,10 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Multicasa</title>
+  <meta charset="UTF-8">
+  <title>Bienes Raíces Multicasa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 </head>
 <body>
-    <h1>¡Bienvenido a Multicasa!</h1>
+
+  <!-- ENCABEZADO -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-title">
+        <img src="{{ url_for('static', filename='images/logo-multicasa.png') }}" alt="Logo Multicasa">
+        <div>
+          <h5 class="mb-0">BIENES RAÍCES MULTICASA</h5>
+          <div class="subtitle">TU MEJOR OPCIÓN EN AGENCIA DE BIENES RAÍCES</div>
+        </div>
+      </div>
+      <div class="phone-box">
+        <i class="bi bi-telephone-fill"></i> <span>LLama al:</span> 1-800-123-4567
+      </div>
+    </div>
+  </div>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <div class="nav-container">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="nav-buttons">
+        <a href="#">Inicio</a>
+        <a href="#">La Compañía</a>
+        <a href="#">Servicios</a>
+        <a href="#">Requisitos</a>
+        <a href="#">Contactos</a>
+      </div>
+      <div class="quick-icons">
+        <div class="icon-label"><i class="bi bi-square-fill"></i> Inicio</div>
+        <div class="icon-label"><i class="bi bi-square-fill"></i> Buscar</div>
+        <div class="icon-label"><i class="bi bi-square-fill"></i> Admin.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container my-4">
+    <div class="row">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="col-md-9">
+
+        <!-- IMAGEN PRINCIPAL -->
+        <div class="main-image mb-3">
+          <img src="{{ url_for('static', filename='images/casa-principal.jpg') }}" alt="Imagen Principal">
+        </div>
+
+        <!-- BIENVENIDA -->
+        <div class="text-center mb-4">
+          <h3 class="text-warning fw-bold">BIENVENIDO</h3>
+          <h6 class="text-muted">¡A nuestro sitio WEB De MultiCasa!</h6>
+        </div>
+
+        <div class="row mb-3 align-items-start">
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='images/foto-bienvenida.png') }}" alt="Imagen destacada" class="img-polaroid">
+          </div>
+          <div class="col-md-9">
+            <p>Hello. In this tutorial I will show you how to create an elegant WordPress PSD theme. You can use this web template also for consulting agency templates, services websites, marketing website templates, business website templates, finance website templates. The design is very clean and can be modified very easy into a great template..</p>
+          </div>
+        </div>
+
+        <p>Hello. In this tutorial I will show you how to create an elegant WordPress PSD theme. The design is very clean and can be modified very easy into a great template..</p>
+
+        <!-- SERVICIOS DESTACADOS -->
+        <h5 class="text-dark fw-bold">SERVICIOS DESTACADOS</h5>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <p>Hello. In this tutorial... <a href="#">➜ Ver Más...</a></p>
+          </div>
+          <div class="col-md-6 mb-3">
+            <p>Hello. In this tutorial... <a href="#">➜ Ver Más...</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA / SIDEBAR -->
+      <div class="col-md-3 sidebar">
+
+        <!-- MENÚ DE ACCIONES -->
+        <div class="action-menu mb-3">
+          <a href="#">COMPRA</a>
+          <a href="#">CONSTRUIR</a>
+          <a href="#">VENTA</a>
+          <a href="#">MUDANZAS</a>
+          <a href="#">SEGUROS</a>
+          <a href="#">CONTACTOS</a>
+        </div>
+
+        <!-- BUSCADOR -->
+        <div class="search-box mb-4">
+          <h6>ENCUENTRA <span class="fw-bold">TU FUTURA PROPIEDAD</span></h6>
+          <div class="mb-2">
+            <label>Ciudad y Estado, o C.P.</label>
+            <input type="text" class="form-control" placeholder="Ej. Saltillo, Coah.">
+          </div>
+          <div class="mb-2">
+            <label>Rango De Búsqueda</label>
+            <select class="form-select">
+              <option>Sin Rango</option>
+            </select>
+          </div>
+          <div class="mb-2 d-flex gap-2">
+            <div>
+              <label>Precio De:</label>
+              <select class="form-select">
+                <option>Todos</option>
+              </select>
+            </div>
+            <div>
+              <label>A:</label>
+              <select class="form-select">
+                <option>Todos</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label>Recámara(s)</label>
+            <select class="form-select">
+              <option>No importa</option>
+            </select>
+          </div>
+          <div class="mb-2">
+            <label>Baño(s)</label>
+            <select class="form-select">
+              <option>No importa</option>
+            </select>
+          </div>
+          <button class="btn btn-primary w-100">Buscar</button>
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <div class="info-section">
+          <h6>Información De Última Hora</h6>
+          <ul class="info-list">
+            <li><a href="#">Nuevo Convenio A Casas Ecológicas. <span>Ver Más...</span></a></li>
+            <li><a href="#">Conoce Nuestros Planes Del ISSSTE. <span>Ver Más...</span></a></li>
+            <li><a href="#">Entérate Cómo Pagar Desde El Extranjero. <span>Ver Más...</span></a></li>
+          </ul>
+        </div>
+
+        <!-- PIE DE ENLACES -->
+        <div class="sidebar-footer text-center mt-3 small">
+          <div class="text-start">
+            <p>✅ <a href="#">Preguntas Frecuentes</a></p>
+            <p>✅ <a href="#">Tips Antes De Comprar</a></p>
+            <p>✅ <a href="#">Políticas de Calidad</a></p>
+            <p>✅ <a href="#">ISO:9001-2012</a></p>
+          </div>
+          <div class="text-center mt-2">
+            <img src="{{ url_for('static', filename='images/icono-contactos.png') }}" width="18">
+            Contactados: <strong>674</strong> | Visitas: <strong>07894</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
